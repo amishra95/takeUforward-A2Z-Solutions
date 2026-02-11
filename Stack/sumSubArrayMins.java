@@ -1,3 +1,10 @@
+
+
+
+
+
+
+// TLE; so Poor code which needs improvement, trying Monotonic Stack method right now
 class Solution {
     public int sumSubarrayMins(int[] arr) {
         long sum = 0;
