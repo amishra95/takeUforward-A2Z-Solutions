@@ -1,3 +1,34 @@
+//Solution 1: Passes 122/132 tests
+class Solution {
+    public int sumSubarrayMins(int[] arr) {
+        long sum = 0;
+        Stack<Integer> stack = new Stack<>();
+
+        for(int i = 0; i < arr.length; i++){
+            while(!stack.isEmpty() && arr[stack.peek()] >= arr[i]){
+                int mid = stack.pop();
+                int left = stack.isEmpty() ? -1 : stack.peek();
+                int right = i;
+                long count = (mid - left) * (right - mid);
+                sum += arr[mid] * count;
+            }
+            stack.push(i);
+        }
+        
+        // Process remaining elements in stack
+        while (!stack.isEmpty()) {
+            int mid = stack.pop();
+            int left = stack.isEmpty() ? -1 : stack.peek();  // Check AFTER popping
+            int right = arr.length;
+            long count = (long)(mid - left) * (right - mid);  // Cast to long to prevent overflow
+            sum += (long)arr[mid] * count;  // Cast to prevent overflow
+        }
+        
+        return (int) sum;
+    }
+}
+
+
 class Solution {
     public int sumSubarrayMins(int[] arr) {
         int n = arr.length;
