@@ -7,12 +7,15 @@ class Solution {
             ListNode head = new ListNode(arr.get(0));
             ListNode prev = head;
 
+
+
+        
         for(int i = 1; i < arr.size(); i++){
             ListNode temp = new ListNode(arr.get(i), prev,null);
             prev.next = temp;
             prev = temp;
         }
-    
+    //ok
         return head;
     }
 
