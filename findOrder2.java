@@ -3,6 +3,9 @@ class Solution {
          boolean[] visited = new boolean[N];
          boolean[] pathVisited = new boolean[N];
 
+
+        
+
         Stack<Integer> stack = new Stack<>();
     List<List<Integer>> list = new ArrayList<>();
 for (int i = 0; i < N; i++) list.add(new ArrayList<>());
