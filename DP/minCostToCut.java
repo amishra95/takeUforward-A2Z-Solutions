@@ -9,7 +9,9 @@ class Solution {
             c[i] = cuts.get(i-1);
         }
         Arrays.sort(c);
-        
+
+
+        //key explanation point and view, with solution and value index)
         int m = c.length;
         int dp[][] = new int[m][m];
 
