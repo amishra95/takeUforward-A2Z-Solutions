@@ -8,7 +8,7 @@ The goal of this project is to build a strong foundation in Data Structures and 
 
 ## 📌 Project Overview
 - **Platform:** [takeUforward](https://takeuforward.org)
-- **Language:** [Enter your language here, e.g., C++ / Java / Python]
+- **Language:** JAVA
 - **Focus:** Problem-solving, Time & Space Complexity optimization.
 
 ## 📂 Repository Structure
