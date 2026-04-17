@@ -51,7 +51,7 @@ class Solution {
 
        int result = 0;
        for(int num:nums){
-        result = Math.max(num, getMax(result));
+        result = Math.max(result, getMax(num));
        }
 
        return result;
