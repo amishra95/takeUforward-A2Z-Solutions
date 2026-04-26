@@ -1,5 +1,6 @@
 class Solution {
     public List<List<String>> partition(String s) {
+       // The solution arc of result wrt String and String case.
         List<List<String>> result = new ArrayList<>();
         backtrack(s, 0, new ArrayList<>(), result);
         return result;
@@ -8,10 +9,12 @@ class Solution {
     }
 
     public void backtrack(String s, int index, List<String> current, List<List<String>> result){
+        //Definitive base case for recursive loop
         if(index == s.length()){
             result.add(new ArrayList<>(current));
             return;
         }
+        
         for(int i = index; i < s.length(); i++){
             if(isPalindrome(s, index, i)){
                 current.add(s.substring(index, i+1));
