@@ -6,6 +6,7 @@ class Solution {
         int buy2 = Integer.MIN_VALUE;
 
         for(int a: arr){
+            
             buy1 = Math.max(buy1, -a);
             sell1 = Math.max(sell1, buy1+a);
             buy2 = Math.max(buy2, sell1-a);
