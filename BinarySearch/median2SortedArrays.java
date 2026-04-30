@@ -1,3 +1,4 @@
+// 2nd fastest solution, still searching for the fastest one
 class Solution {
     public double median(int[] arr1, int[] arr2) {
         
