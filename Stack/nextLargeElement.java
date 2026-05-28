@@ -1,3 +1,27 @@
+class Solution {
+    public int[] nextLargerElement(int[] arr) {
+
+        Stack<Integer> stack = new Stack<>();
+
+    int n = arr.length;    
+    
+        int[] mess = new int[n];
+    for(int i = n-1; i >= 0; i--){
+        while(!stack.isEmpty() && stack.peek() <= arr[i]){
+            stack.pop();
+        }
+        if(stack.isEmpty()){
+            mess[i] = -1;
+        }
+        else
+        mess[i] = stack.peek();
+
+        stack.push(arr[i]);
+    }
+        return mess;
+
+    }
+}
 //Tried the Monotonic Stack case
 
 class Solution {
