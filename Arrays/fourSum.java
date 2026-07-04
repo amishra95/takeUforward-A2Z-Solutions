@@ -8,6 +8,7 @@ class Solution {
         for(int j = i+1; j < nums.length-2; j++){
             if(j > i+1 && nums[j] == nums[j-1]) continue;
             int left = j+1;
+            
             int right = nums.length-1;
 
             while(left < right){
