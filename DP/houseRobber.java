@@ -1,9 +1,11 @@
 class Solution {
     public int houseRobber(int[] money) {
     
-  if (money == null) return 0;
-int n = money.length;
-if (n == 0) return 0;
+  if (money == null) 
+  {    return 0;
+  }
+    int n = money.length;
+    if (n == 0) return 0;
 
         if(n == 1){
             return money[0];
