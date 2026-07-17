@@ -6,6 +6,7 @@ class Solution {
         int n = money.length;
         int[] skipLastHouse = new int[n - 1];
         int[] skipFirstHouse = new int[n - 1];
+        
 
         for (int i = 0; i < n - 1; i++) {
             skipLastHouse[i] = money[i];
