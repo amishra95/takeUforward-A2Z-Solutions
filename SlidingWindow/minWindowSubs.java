@@ -1,3 +1,66 @@
+//Improvement and fixing of hashMap
+import java.util.HashMap;
+
+class Solution {
+    public String minWindow(String s, String t) {
+        if(t.length() > s.length()){
+            return "";
+        }
+
+        HashMap<Character, Integer> map = new HashMap<>();
+        
+        for(int i = 0; i < t.length(); i++){
+            map.put(t.charAt(i), map.getOrDefault(t.charAt(i), 0)+1);
+        }
+
+        int left = 0;
+        int length = map.size();
+        int size = 0;
+        
+        int minVal = Integer.MAX_VALUE;
+        int minLeft = 0;
+
+        HashMap<Character, Integer> windowmap = new HashMap<>();
+        
+        for(int right = 0; right < s.length(); right++){
+            
+            char ch = s.charAt(right); 
+            windowmap.put(ch, windowmap.getOrDefault(ch, 0)+1);
+        
+            if(map.containsKey(ch) && windowmap.get(ch).equals(map.get(ch))){
+                size++;
+            }
+            
+            while(size == length){
+                int currlength = right - left + 1;
+                
+                if (currlength < minVal) {
+                minVal = currlength;
+                minLeft = left;
+                
+                }
+
+                char leftChar = s.charAt(left);
+
+            windowmap.put(leftChar, windowmap.get(leftChar)- 1);
+            if(map.containsKey(leftChar) && windowmap.get(leftChar) < map.get(leftChar)){
+                size--;
+            }
+               left++;
+            }
+        }
+
+    if (minVal == Integer.MAX_VALUE) {
+    return "";
+} 
+    else {
+        return s.substring(minLeft, minLeft + minVal);
+}
+
+
+    }
+}
+
 class Solution {
   public String minWindow(String s, String t) {
 
