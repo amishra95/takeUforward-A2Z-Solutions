@@ -8,6 +8,8 @@
  * }
  **/
 
+
+
 //root.left.val == root.right) and (root.left != root.right)
 class Solution {
     public boolean isBST(TreeNode root) {
