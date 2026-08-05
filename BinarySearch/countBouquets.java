@@ -8,6 +8,7 @@ class Solution {
         int hi = Integer.MIN_VALUE;
         for(int i = 0; i < nums.length; i++){
             lo = Math.min(lo, nums[i]);
+            
             hi = Math.max(hi, nums[i]);
         }
 
