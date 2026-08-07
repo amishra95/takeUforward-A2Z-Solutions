@@ -9,6 +9,7 @@
  **/
 
 class Solution {
+   
    int max = 0;
     public int diameterOfBinaryTree(TreeNode root) {
         if(root == null){
