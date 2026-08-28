@@ -6,6 +6,7 @@ class Solution {
         if(nums.length == 0){
             return list;
         }
+        
 
         int max = nums[nums.length-1];
         list.add(nums[nums.length-1]);
