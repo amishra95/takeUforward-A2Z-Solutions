@@ -8,6 +8,7 @@ class Solution {
         for(int i = 1; i <= nums.length; i++){
             arr[i] = nums[i-1];
         }
+
         
         int m = arr.length;
         int dp[][] = new int[m][m];
