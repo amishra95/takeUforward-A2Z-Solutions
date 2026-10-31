@@ -1,4 +1,4 @@
-Coding Stak and based problems in it.
-
-
-Rate this as very hard
+Monotonic Stack : Key Problems involved in
+- Daily Temp
+- Next greater element
+- Histogram, (Sky Scrapper problem)
