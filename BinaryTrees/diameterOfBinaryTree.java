@@ -20,6 +20,7 @@ class Solution {
             return max;
     }
 
+   
     public int maxDepth(TreeNode root){
         if(root == null){
             return 0;
